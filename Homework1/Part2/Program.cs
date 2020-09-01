@@ -18,16 +18,14 @@ using System;
 
 namespace Part2
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      Console.WriteLine("         #          ");
-      Console.WriteLine("        # #         ");
-      Console.WriteLine("       #   #        ");
-      Console.WriteLine("      #######       ");
-      
-        
+        static void Main(string[] args)
+        {
+              Console.WriteLine("         #          ");
+              Console.WriteLine("        # #         ");
+              Console.WriteLine("       #   #        ");
+              Console.WriteLine("      #######       ");
+        }
     }
-  }
 }
