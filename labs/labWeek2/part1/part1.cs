@@ -1,32 +1,28 @@
-﻿/// Chapter No. 1		Exercise No. 1
-/// File Name: MyFirstProgram
+﻿/// Lab No. 1 Part 1
+/// File Name: Part1
+/// 
 /// @author: Westley Cho
-/// Date:  August 24, 2020
+/// Date:  September 7, 2020
 ///
-/// Problem Statement: Ask the user to enter two numbers, calculate the sum of
-/// these two numbers, and display the sum to the screen
+/// Problem Statement: Ask the user to enter three numbers, calculate the sum of
+/// these three numbers, and display the sum to the screen
 /// 
 /// 
 /// Overall Plan:
 /// 1) Print an initial welcoming message to the screen
-/// 2) Prompt the user for two integers
+/// 2) Prompt the user for three integers
 /// 3) Calculate the sum of the integers
 /// 4) Print the sum of the integers to the screen
-/// 
+///
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace part1
 {
-    class MyFirstProgram
+    class Program
     {
         static void Main(string[] args)
         {
-            // print a message to the screen
             Console.WriteLine("Hello out there.");
             Console.WriteLine("I will add three numbers for you.");
             Console.WriteLine("Enter one number and press enter, then enter second number and press enter, enter third number and press enter:");
@@ -47,7 +43,6 @@ namespace ConsoleApplication1
 
             //Just to pause the screen.
             Console.ReadLine();
-
         }
     }
 }
