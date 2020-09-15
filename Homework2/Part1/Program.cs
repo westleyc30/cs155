@@ -28,10 +28,18 @@ namespace Part1
     {
         static void Main(string[] args)
         {
+            String firstName, lastname;
             Console.WriteLine("Hello World! Today we're going to pig latinify your name");
             Console.WriteLine("What's your first name? ");
+            firstName = Console.ReadLine();
             Console.WriteLine("What's your last name? ");
-            Console.WriteLine("In pig latin your name would be ");
+            lastname = Console.ReadLine();
+            String pigLatinFirstname, pigLatinLastname;
+            pigLatinFirstname = firstName.Substring(1, firstName.Length - 1) + firstName.Substring(0,1).ToLower() + "ay";
+            pigLatinFirstname = pigLatinFirstname.Substring(0, 1).ToUpper() + pigLatinFirstname.Substring(1, pigLatinFirstname.Length - 1);
+            pigLatinLastname = lastname.Substring(1, lastname.Length - 1) + lastname.Substring(0, 1).ToLower() + "ay";
+            pigLatinLastname = pigLatinLastname.Substring(0, 1).ToUpper() + pigLatinLastname.Substring(1, pigLatinLastname.Length - 1);
+            Console.WriteLine("In pig latin your name would be " + pigLatinFirstname + " " + pigLatinLastname);
         }
     }
 }
