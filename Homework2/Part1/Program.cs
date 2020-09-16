@@ -28,18 +28,32 @@ namespace Part1
     {
         static void Main(string[] args)
         {
-            String firstName, lastname;
+            String firstName, lastName;
+
             Console.WriteLine("Hello World! Today we're going to pig latinify your name");
             Console.WriteLine("What's your first name? ");
             firstName = Console.ReadLine();
             Console.WriteLine("What's your last name? ");
-            lastname = Console.ReadLine();
-            String pigLatinFirstname, pigLatinLastname;
-            pigLatinFirstname = firstName.Substring(1, firstName.Length - 1) + firstName.Substring(0,1).ToLower() + "ay";
-            pigLatinFirstname = pigLatinFirstname.Substring(0, 1).ToUpper() + pigLatinFirstname.Substring(1, pigLatinFirstname.Length - 1);
-            pigLatinLastname = lastname.Substring(1, lastname.Length - 1) + lastname.Substring(0, 1).ToLower() + "ay";
-            pigLatinLastname = pigLatinLastname.Substring(0, 1).ToUpper() + pigLatinLastname.Substring(1, pigLatinLastname.Length - 1);
-            Console.WriteLine("In pig latin your name would be " + pigLatinFirstname + " " + pigLatinLastname);
+            lastName = Console.ReadLine();
+
+
+            String pigLatinFirstName, pigLatinLastName;
+            pigLatinFirstName = capitalizeWord(toPigLatin(firstName));
+            pigLatinLastName = capitalizeWord(toPigLatin(lastName));
+
+            Console.WriteLine("In pig latin your name would be " + pigLatinFirstName + " " + pigLatinLastName);
+        }
+        static String capitalizeWord(String word)
+        {
+            String capitalizedWord;
+            capitalizedWord = word.Substring(0, 1).ToUpper() + word.Substring(1, word.Length - 1);
+            return capitalizedWord;
+        }
+        static String toPigLatin(String word)
+        {
+            String pigLatinizedWord;
+            pigLatinizedWord = word.Substring(1, word.Length - 1) + word.Substring(0, 1).ToLower() + "ay";
+            return pigLatinizedWord;
         }
     }
 }
