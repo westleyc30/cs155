@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="First Name" HorizontalAlignment="Left" Height="24" Margin="304,82,0,0" VerticalAlignment="Top" Width="132"/>
-        <Label Content="Last Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="304,155,0,0" Width="119"/>
-        <Button Content="Print Pig Latin" HorizontalAlignment="Left" Height="34" Margin="316,265,0,0" VerticalAlignment="Top" Width="164" Click="Button_Click"/>
-        <TextBox Name="firstNameBox" HorizontalAlignment="Left" Height="24" Margin="386,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102" TextChanged="TextBox_TextChanged"/>
-        <TextBox Name="lastNameBox" HorizontalAlignment="Left" Height="26" Margin="386,155,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102" TextChanged="lastNameBox_TextChanged"/>
+        <Label Content="First Name" HorizontalAlignment="Left" Height="24" Margin="303,144,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label Content="Last Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="303,173,0,0" Width="119"/>
+        <Button Content="Print Pig Latin" HorizontalAlignment="Left" Height="34" Margin="303,227,0,0" VerticalAlignment="Top" Width="184" Click="Button_Click"/>
+        <TextBox Name="firstNameBox" HorizontalAlignment="Left" Height="24" Margin="385,144,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102" TextChanged="TextBox_TextChanged"/>
+        <TextBox Name="lastNameBox" HorizontalAlignment="Left" Height="26" Margin="385,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="102" TextChanged="lastNameBox_TextChanged"/>
 
     </Grid>
 </Window>
