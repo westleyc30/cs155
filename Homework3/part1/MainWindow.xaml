@@ -1,0 +1,28 @@
+﻿<Window x:Class="part1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:part1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Mortgage" HorizontalAlignment="Left" Height="27" Margin="311,15,0,0" VerticalAlignment="Top" Width="66" FontSize="8"/>
+        <TextBox Name="mortgageTxtBox" HorizontalAlignment="Left" Height="27" Margin="311,34,0,0" TextWrapping="Wrap" Text="100000" VerticalAlignment="Top" Width="157"/>
+        <Label Content="Interest Rate" HorizontalAlignment="Left" Height="27" Margin="311,66,0,0" VerticalAlignment="Top" Width="92" Background="White" FontSize="8"/>
+        <TextBox Name="interestRateTxtBox" HorizontalAlignment="Left" Height="27" Margin="311,84,0,0" TextWrapping="Wrap" Text="6.39" VerticalAlignment="Top" Width="157"/>
+        <Label Content="payment" HorizontalAlignment="Left" Height="27" Margin="311,116,0,0" VerticalAlignment="Top" Width="92" Background="White" FontSize="8"/>
+        <TextBox Name="paymentTxtBox" HorizontalAlignment="Left" Height="27" Margin="311,133,0,0" TextWrapping="Wrap" Text="1500" VerticalAlignment="Top" Width="157" TextChanged="paymentTxtBox_TextChanged"/>
+
+        <Button Content="Calculate" HorizontalAlignment="Left" Height="36" Margin="279,199,0,0" VerticalAlignment="Top" Width="239" Click="Button_Click" />
+
+        <Label Content="to Principal" HorizontalAlignment="Left" Height="27" Margin="311,253,0,0" VerticalAlignment="Top" Width="92" Background="White" FontSize="8"/>
+        <TextBox Name="toPrincipleTxtBox" HorizontalAlignment="Left" Height="27" Margin="311,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
+        <Label Content="to mortgage" HorizontalAlignment="Left" Height="27" Margin="311,306,0,0" VerticalAlignment="Top" Width="92" Background="White" FontSize="8"/>
+        <TextBox x:Name="toMortgageTxtBox" HorizontalAlignment="Left" Height="27" Margin="311,323,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="157"/>
+
+    </Grid>
+</Window>
