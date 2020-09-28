@@ -1,0 +1,22 @@
+﻿<Window x:Class="Lab4SpeedLimit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab4SpeedLimit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Canvas Name="speedCanvas" HorizontalAlignment="Center" Height="419" VerticalAlignment="Center" Width="792">
+            <Rectangle Fill="#FFF4F4F5" Height="160" Canvas.Left="237" Canvas.Top="127" Width="291" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.9"/>
+            <Label Content="Your Speed" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="101" Canvas.Left="293" Canvas.Top="173"/>
+            <Label Content="Speed Limit" HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="101" Canvas.Left="293" Canvas.Top="212"/>
+            <TextBox Name="speedTxtBox" Height="34" Canvas.Left="394" TextWrapping="Wrap" Text="55" Canvas.Top="173" Width="111"/>
+            <TextBox Name="speedLimitTxtBox"  Height="34" Canvas.Left="394" TextWrapping="Wrap" Text="55" Canvas.Top="212" Width="111" FontFamily="Futura" FontSize="20"/>
+            <Button Content="Check Speed" Height="24" Canvas.Left="325" Canvas.Top="251" Width="125" Click="Button_Click"/>
+            <TextBlock x:Name="checkTxtBlock" TextWrapping="Wrap" TextAlignment="Center" Text="" Canvas.Left="237" Canvas.Top="307" Height="52" Width="291" FontFamily="Futura" FontSize="18"/>
+        </Canvas>
+
+    </Grid>
+</Window>
