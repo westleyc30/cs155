@@ -153,17 +153,14 @@ namespace GradeCalculator
         /// HELPERS
         public double CalculateQuiz(double quiz1, double quiz2, double quiz3)
         {
-            Console.WriteLine((quiz1 + quiz2 + quiz3) / 30 * 25);
             return ((quiz1 + quiz2 + quiz3) / 30) * 25;
         }
         public double CaclulateMidterm(double midterm)
         {
-            Console.WriteLine((midterm / 100) * 35);
             return (midterm / 100) * 35;
         }
         public double CalculateFinal(double final)
         {
-            Console.WriteLine((final / 100) * 40);
             return (final / 100) * 40;
         }
     }
