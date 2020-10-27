@@ -38,6 +38,13 @@ namespace Project2
             }
             return isValid;
         }
+
+        /// <summary>
+        /// sets scale
+        /// Must be Uppercase C or F
+        /// </summary>
+        /// <param name="scale"></param>
+        /// <returns>bool validation</returns>
         public bool SetScale(char scale)
         {
             bool isValid = scale == 'C' || scale == 'F';
@@ -65,12 +72,52 @@ namespace Project2
         {
             return scale;
         }
+        public double GetTempC()
+        {
+            if(scale.Equals('F'))
+            {
+                double temp = (temperature - 32) * 5 / 9;
+                temp = Math.Round(temp, 1);
+                return temp;
+            } else
+            {
+                return Math.Round(temperature, 1);
+            }
+        }
+        public double GetTempF()
+        {
+            if (scale.Equals('C'))
+            {
+                double temp = (temperature * 9 / 5) + 32;
+                temp = Math.Round(temp, 1);
+                return temp;
+            }
+            else
+            {
+                return Math.Round(temperature, 1);
+            }
+        }
+
 
         // Methods
         override
-        public string ToString()
+        public String ToString()
         {
             return $"{temperature}{scale}";
+        }
+
+        override
+        public bool Equals(Object other)
+        {
+            if (other == null || !this.GetType().Equals(other.GetType()))
+            {
+                return false;
+            } else
+            {
+                TemperatureScale otherTemp = (TemperatureScale)other;
+                return this.GetTempC() == otherTemp.GetTempC();
+            }
+            
         }
     }
 }

@@ -33,7 +33,40 @@ namespace Project2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TemperatureScale first = new TemperatureScale();
+            TemperatureScale second = new TemperatureScale();
+            TemperatureScale setTempOnly = new TemperatureScale(100);
+            TemperatureScale setScaleOnly = new TemperatureScale('C');
+
+
+            first.SetScale('C');
+            first.SetTemperature(80);
+            second.SetAll(80, 'C');
+
+            Console.WriteLine(first.GetTemperature());
+            Console.WriteLine(second.GetTemperature());
+
+            Console.WriteLine(first.GetScale());
+            Console.WriteLine(second.GetScale());
+
+            
+
+
+            string value = first.ToString();
+            Console.WriteLine("Test tostring");
+            Console.WriteLine(value);
+            Console.WriteLine("Testing equals true");
+            Console.WriteLine(first.Equals(second));
+            Console.WriteLine("testing equals false");
+            Console.WriteLine(first.Equals(setScaleOnly));
+
+
+            Console.WriteLine("Only temp should return 100C");
+            Console.WriteLine(setTempOnly.ToString());
+
+            Console.WriteLine("Only scale should return 0C");
+            Console.WriteLine(setScaleOnly.ToString());
+            Console.WriteLine($"in farenheit: {setScaleOnly.GetTempF()}");
         }
     }
 }
