@@ -23,7 +23,23 @@ namespace project1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Pizza cheese = new Pizza();
+            Pizza ham = new Pizza("medium", 1, 1, 0);
+            Pizza choose = new Pizza();
+
+            choose.setSize("large");
+            choose.setCheese(5);
+            choose.setHam(2);
+            choose.setPepperoni(6);
+
+            Console.WriteLine(cheese.ToString());
+            Console.WriteLine(ham.ToString());
+            Console.WriteLine(choose.ToString());
+            Console.WriteLine(choose.getSize());
+            Console.WriteLine(choose.getHam());
+            Console.WriteLine(choose.getCheese());
+            Console.WriteLine(choose.getPepperoni());
+            Console.WriteLine(choose.CalculateCost());
         }
     }
 }
