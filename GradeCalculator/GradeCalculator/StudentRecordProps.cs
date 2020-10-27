@@ -73,7 +73,7 @@ namespace GradeCalculator
         }
         public double totalGrade
         {
-            get { return quizPercent + midtermPercent + finalPercent; }
+            get { return Math.Round((quizPercent + midtermPercent + finalPercent), 2); }
         }
         public char letterGrade
         {
