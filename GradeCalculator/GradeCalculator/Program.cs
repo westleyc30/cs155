@@ -30,7 +30,7 @@ namespace GradeCalculator
 
             StudentRecordProps student1 = new StudentRecordProps(7, 9, 8, 100, 100);
             StudentRecordProps student1Copy = new StudentRecordProps(7, 9, 8, 100, 100);
-            StudentRecordProps C = new StudentRecordProps(7, 8, 6, 77, 80);
+            StudentRecordProps C = new StudentRecordProps(7, 6, 6, 77, 80);
 
             Console.WriteLine("#################");
             Console.WriteLine("");
