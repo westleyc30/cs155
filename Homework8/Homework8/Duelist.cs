@@ -23,9 +23,11 @@ namespace Homework8
             this.name = name;
             this.accuracyNum = accuracyNum;
             this.accuracyDenom = accuracyDenom;
+            this.threat = (double)accuracyNum / (double)accuracyDenom;
         }
 
         // GETTERS/SETTERS
+        public double threat { get; }
         public String name { get { return _name; } set { _name = value; } }
 
         public int accuracyNum
@@ -57,6 +59,16 @@ namespace Homework8
 
         // OTHER METHODS
 
+        public bool Equals(Object o)
+        {
+            if (o == null)
+            {
+                return false;
+            }
+            Duelist otherDuelist = (Duelist)o;
+            return this.name == otherDuelist.name && this.accuracyNum == otherDuelist.accuracyNum && this.accuracyDenom == otherDuelist.accuracyDenom && this.alive == otherDuelist.alive;
+        }
+
         public bool shoot(Duelist target)
         {
             bool hit = false;
@@ -66,13 +78,21 @@ namespace Homework8
             {
                 hit = true;
                 target.alive = false;
-                Console.WriteLine($"{name} targets {target.name} rolls a {roll} and hits.");
-            } else
-            {
-                Console.WriteLine($"{name} targets {target.name} rolls a {roll} and misses.");
-            }
+            } 
             return hit;
-        }        
+        }
+        public Duelist determineGreatestThreat(Duelist[] duelistArray)
+        {
+            Duelist greatestThreat = duelistArray[0]; 
+            for (int i = 0; i < duelistArray.Length; i++)
+            {
+                if (duelistArray[i].alive && duelistArray[i].threat > this.threat || duelistArray[i].alive && greatestThreat.threat < duelistArray[i].threat)
+                {
+                    greatestThreat = (Duelist)duelistArray[i];
+                }
+            }
+            return greatestThreat;
+        }
 
     }
 }
