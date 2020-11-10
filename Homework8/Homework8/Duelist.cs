@@ -70,7 +70,7 @@ namespace Homework8
         }
 
         public bool shoot(Duelist target)
-        {
+        { 
             bool hit = false;
             var rand = new Random();
             int roll = rand.Next(1, accuracyDenom + 1);
