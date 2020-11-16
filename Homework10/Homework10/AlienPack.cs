@@ -19,22 +19,28 @@ namespace Homework10
         {
             return aliens;
         }
-        public int CalculateDamage()
+        public int CalculateDamage() 
         {
             int damage = 0;
             foreach (Alien a in aliens)
             {
-                if (a.type == Alien.SNAKE_ALIEN)
+                if (a is Snake)
                 {
-                    damage += 10;
+                    Snake snake = a as Snake;
+                    Console.WriteLine(snake.GetDamage());
+                    damage += snake.GetDamage();
                 }
-                else if (a.type == Alien.OGRE_ALIEN)
+                else if (a is Ogre)
                 {
-                    damage += 6;
+                    Ogre ogre = a as Ogre;
+                    Console.WriteLine(ogre.GetDamage());
+                    damage += ogre.GetDamage();
                 }
-                else if (a.type == Alien.MARSHALLOW_MAN_ALIEN)
+                else if (a is MarshmellowMan)
                 {
-                    damage += 1;
+                    MarshmellowMan marshmellowMan = a as MarshmellowMan;
+                    Console.WriteLine(marshmellowMan.GetDamage());
+                    damage += marshmellowMan.GetDamage();
                 }
             }
             return damage;

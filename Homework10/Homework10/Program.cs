@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-namespace Homework11
+namespace Homework10
 {
    
     
@@ -17,6 +17,12 @@ namespace Homework11
     {
         static void Main(string[] args)
         {
+            AlienPack pack = new AlienPack(3);
+            pack.AddAlien(new Ogre(100, "Ugh"), 0);
+            pack.AddAlien(new Snake(100, "Sssstethysss"), 1);
+            pack.AddAlien(new MarshmellowMan(100, "March"), 2);
+
+            Console.WriteLine(pack.CalculateDamage());
         }
     }
 }
