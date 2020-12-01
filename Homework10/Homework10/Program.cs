@@ -21,6 +21,11 @@ namespace Homework10
             pack.AddAlien(new Ogre(100, "Ugh"), 0);
             pack.AddAlien(new Snake(100, "Sssstethysss"), 1);
             pack.AddAlien(new MarshmellowMan(100, "March"), 2);
+            Alien snake1 = new Snake(183, "bill");
+            Snake snake2 = new Snake(21, "dd");
+
+            Console.WriteLine(snake1.GetDamage());// 10
+            Console.WriteLine(snake2.GetDamage());//9
 
             Console.WriteLine(pack.CalculateDamage());
         }
