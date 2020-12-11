@@ -62,10 +62,15 @@ namespace lab1
                         break;
                 }    
             }
-            catch(DivideByZeroException )
+            catch(DivideByZeroException)
             {
                 MessageBox.Show("ERROR: dividing by zero not allowed");
             }
+            catch(FormatException)
+            {
+                MessageBox.Show("ERROR: please input numerical values into left and right boxes");
+            }
+            
 
         }
 
